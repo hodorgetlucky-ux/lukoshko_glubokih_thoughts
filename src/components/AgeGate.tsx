@@ -34,17 +34,21 @@ export default function AgeGate({ onVerified }: Props) {
   return (
     <div className={styles.wrapper}>
       <div className={styles.card}>
-        <div className={styles.icon}>🪣</div>
-        <h1 className={styles.title}>Лукошко Глубоких Мыслей</h1>
+        <div className={styles.icon}>🪣✨🎉</div>
+        <h1 className={styles.title}>
+          <span className="wordart">Лукошко</span><br />
+          <span className="wordart wordart-blue">Глубоких</span><br />
+          <span className="wordart wordart-rainbow">Мыслей</span>
+        </h1>
         <p className={styles.subtitle}>
-          Народная мудрость для современных ситуаций
+          🌟 Народная мудрость для современных ситуаций 🌟
         </p>
         <div className={styles.warning}>
-          ⚠️ Контент для взрослых. Только 18+.
+          <span className="blink">⚠️</span> ТОЛЬКО ДЛЯ ВЗРОСЛЫХ!!! 18+ 🔞 <span className="blink">⚠️</span>
         </div>
         <form onSubmit={handleSubmit} className={styles.form}>
           <label className={styles.label}>
-            Дата рождения
+            🎂 Введи дату рождения 🎂
             <input
               type="date"
               value={dob}
@@ -53,9 +57,9 @@ export default function AgeGate({ onVerified }: Props) {
               max={new Date().toISOString().split('T')[0]}
             />
           </label>
-          {error && <p className={styles.error}>{error}</p>}
+          {error && <p className={styles.error}>❌ {error}</p>}
           <button type="submit" className={styles.button}>
-            Войти
+            👉 ВОЙТИ 👈
           </button>
         </form>
       </div>

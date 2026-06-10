@@ -5,15 +5,7 @@
 }
 
 :root {
-  --bg: #0f0f0f;
-  --surface: #1a1a1a;
-  --surface2: #242424;
-  --border: #333;
-  --text: #f0f0f0;
-  --text-muted: #888;
-  --accent: #ff4d00;
-  --accent-soft: #ff6b35;
-  --gold: #e8b84b;
+  --text: #000080;
 }
 
 html, body {
@@ -21,10 +13,15 @@ html, body {
 }
 
 body {
-  background: var(--bg);
+  /* Tacky early-2000s tiled gradient background */
+  background: #008080;
+  background-image:
+    repeating-linear-gradient(45deg, rgba(255,255,0,0.08) 0 20px, rgba(255,0,255,0.08) 20px 40px),
+    linear-gradient(135deg, #00c3ff 0%, #008080 40%, #800080 100%);
+  background-attachment: fixed;
   color: var(--text);
-  font-family: 'Georgia', 'Times New Roman', serif;
-  line-height: 1.6;
+  font-family: 'Comic Sans MS', 'Comic Sans', 'Chalkboard SE', cursive;
+  line-height: 1.5;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -51,6 +48,43 @@ input {
 }
 
 ::selection {
-  background: var(--accent);
-  color: white;
+  background: #ffff00;
+  color: #ff00ff;
+}
+
+/* === Classic WordArt: rainbow/sunset gradient fill, black outline, skewed === */
+.wordart {
+  font-family: 'Impact', 'Arial Black', 'Haettenschweiler', sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  background-image: linear-gradient(to bottom, #fff700 0%, #ffae00 40%, #ff1e00 75%, #b00000 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  filter:
+    drop-shadow(2px 2px 0 #000)
+    drop-shadow(-1px -1px 0 #000)
+    drop-shadow(0 0 1px #000);
+  transform: skewX(-8deg) rotate(-2deg);
+  letter-spacing: 1px;
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+.wordart-blue {
+  background-image: linear-gradient(to bottom, #b9eaff 0%, #2196f3 45%, #0033aa 100%);
+}
+
+.wordart-rainbow {
+  background-image: linear-gradient(90deg, #ff0000, #ff9900, #ffee00, #33cc33, #0099ff, #6633ff, #ff33cc);
+}
+
+@keyframes blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+.blink {
+  animation: blink 1s steps(1) infinite;
 }

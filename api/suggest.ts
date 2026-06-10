@@ -2,8 +2,6 @@ import Anthropic from '@anthropic-ai/sdk'
 
 export const config = { runtime: 'edge' }
 
-const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY })
-
 const SYSTEM_PROMPT = `Ты — эксперт по русскому народному фольклору и разговорным выражениям. Твоя задача — подобрать наиболее точное и уместное народное выражение к описанной ситуации.
 
 Вот список доступных выражений:
@@ -125,6 +123,16 @@ export default async function handler(req: Request): Promise<Response> {
       headers: { 'Content-Type': 'application/json' },
     })
   }
+
+  const apiKey = process.env.ANTHROPIC_API_KEY
+  if (!apiKey) {
+    return new Response(JSON.stringify({ error: 'API-ключ не настроен на сервере (ANTHROPIC_API_KEY). Проверь переменные окружения в Vercel и сделай Redeploy.' }), {
+      status: 500,
+      headers: { 'Content-Type': 'application/json' },
+    })
+  }
+
+  const client = new Anthropic({ apiKey })
 
   try {
     const response = await client.messages.create({

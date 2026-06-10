@@ -111,8 +111,12 @@ export default function IdiomFinder() {
       <header className={styles.header}>
         <span className={styles.headerIcon}>🪣</span>
         <div>
-          <h1 className={styles.headerTitle}>Лукошко Глубоких Мыслей</h1>
-          <p className={styles.headerSub}>Народная мудрость для любой ситуации</p>
+          <h1 className={styles.headerTitle}>
+            <span className="wordart">Лукошко</span>{' '}
+            <span className="wordart wordart-blue">Глубоких</span>{' '}
+            <span className="wordart wordart-rainbow">Мыслей</span>
+          </h1>
+          <p className={styles.headerSub}>🌟 Народная мудрость для любой ситуации 🌟</p>
         </div>
       </header>
 
@@ -127,19 +131,19 @@ export default function IdiomFinder() {
               rows={5}
               disabled={loading}
             />
-            {hasVoice && (
-              <button
-                type="button"
-                onClick={toggleVoice}
-                className={`${styles.voiceBtn} ${listening ? styles.voiceBtnActive : ''}`}
-                title={listening ? 'Остановить запись' : 'Говорить голосом'}
-              >
-                {listening ? '⏹' : '🎙'}
-              </button>
-            )}
           </div>
+          {hasVoice && (
+            <button
+              type="button"
+              onClick={toggleVoice}
+              className={`${styles.voiceBtn} ${listening ? styles.voiceBtnActive : ''}`}
+              title={listening ? 'Остановить запись' : 'Говорить голосом'}
+            >
+              {listening ? '⏹ ОСТАНОВИТЬ ЗАПИСЬ ⏹' : '🎙️ ГОВОРИТЬ ГОЛОСОМ 🎙️'}
+            </button>
+          )}
           {listening && (
-            <p className={styles.listeningHint}>🔴 Слушаю... говори по-русски</p>
+            <p className={styles.listeningHint}>🔴 СЛУШАЮ... ГОВОРИ ПО-РУССКИ 🔴</p>
           )}
           {error && <p className={styles.error}>{error}</p>}
           <div className={styles.actions}>
