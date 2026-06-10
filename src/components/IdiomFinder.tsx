@@ -39,13 +39,11 @@ export default function IdiomFinder() {
       return
     }
 
-    const SpeechRecognition =
-      (window as Window & { SpeechRecognition?: typeof window.SpeechRecognition }).SpeechRecognition ||
-      (window as Window & { webkitSpeechRecognition?: typeof window.SpeechRecognition }).webkitSpeechRecognition
+    const SpeechRecognitionCtor = window.SpeechRecognition || window.webkitSpeechRecognition
 
-    if (!SpeechRecognition) return
+    if (!SpeechRecognitionCtor) return
 
-    const rec = new SpeechRecognition()
+    const rec = new SpeechRecognitionCtor()
     rec.lang = 'ru-RU'
     rec.continuous = false
     rec.interimResults = false

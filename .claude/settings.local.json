@@ -3,7 +3,9 @@
     "allow": [
       "Skill(claude-api)",
       "Skill(claude-api:*)",
-      "Bash(cmd.exe /c \"node --version && npm --version\")"
+      "Bash(cmd.exe /c \"node --version && npm --version\")",
+      "Bash(cmd.exe /c \"node --version\")",
+      "Bash(cmd.exe /c \"npm --version\")"
     ]
   }
 }
