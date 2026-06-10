@@ -7,14 +7,33 @@
 }
 
 .card {
-  background: #ffffcc;
+  background: #14001f;
   border: 6px ridge #ff00ff;
   border-radius: 0;
   padding: 32px 28px;
   max-width: 480px;
   width: 100%;
   text-align: center;
-  box-shadow: 8px 8px 0 #000080, -2px -2px 0 #00ffff inset;
+  box-shadow: 0 0 24px #ff00ff, 8px 8px 0 #00ffcc;
+}
+
+.brand {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  color: #00ffcc;
+  background: #050010;
+  border: 2px solid #00ffcc;
+  border-radius: 999px;
+  padding: 4px 14px;
+  margin-bottom: 16px;
+  text-shadow: 0 0 8px #00ffcc;
+  box-shadow: 0 0 12px rgba(0,255,204,0.5);
+}
+
+.brandLogo {
+  font-size: 1rem;
 }
 
 .icon {
@@ -30,19 +49,20 @@
 }
 
 .subtitle {
-  color: #800080;
+  color: #ff66ff;
   font-size: 1.05rem;
   font-weight: bold;
   margin-bottom: 18px;
 }
 
 .warning {
-  background: #ffff00;
+  background: #1a0000;
   border: 4px dashed #ff0000;
   padding: 10px 14px;
   font-size: 1rem;
   font-weight: bold;
-  color: #ff0000;
+  color: #ff3333;
+  text-shadow: 0 0 8px #ff0000;
   margin-bottom: 24px;
   text-transform: uppercase;
 }
@@ -59,24 +79,25 @@
   gap: 8px;
   font-size: 1.05rem;
   font-weight: bold;
-  color: #000080;
+  color: #00ffcc;
   text-align: center;
 }
 
 .input {
-  background: #ffffff;
-  border: 3px inset #008080;
+  background: #050010;
+  border: 3px inset #00ffcc;
   border-radius: 0;
   padding: 12px 14px;
-  color: #000080;
+  color: #00ffcc;
   font-size: 1.1rem;
   font-family: 'Comic Sans MS', cursive;
   outline: none;
+  color-scheme: dark;
 }
 
 .input:focus {
   border-color: #ff00ff;
-  background: #ffffee;
+  background: #0d0018;
 }
 
 .error {

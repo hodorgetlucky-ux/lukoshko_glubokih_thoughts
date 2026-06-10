@@ -121,6 +121,19 @@ export default function IdiomFinder() {
       </header>
 
       <main className={styles.main}>
+        <div className={styles.saasAd}>
+          <div className={styles.saasBrand}>🎧 B2B SaaS Hard Bass™</div>
+          <p className={styles.saasPitch}>
+            Революционная AI-платформа enterprise-уровня для масштабирования
+            народной мудрости. Synergy. Disruption. Hard Bass. 🚀
+          </p>
+          <div className={styles.saasBadges}>
+            <span>☁️ Cloud-Native</span>
+            <span>🤖 GPT-Powered</span>
+            <span>📈 10x ROI</span>
+            <span>🔒 Enterprise-Grade</span>
+          </div>
+        </div>
         <form onSubmit={handleSubmit} className={styles.form}>
           <div className={styles.inputWrapper}>
             <textarea
@@ -205,6 +218,7 @@ export default function IdiomFinder() {
       </main>
 
       <footer className={styles.footer}>
+        <p className={styles.footerBrand}>🎧 B2B SaaS Hard Bass™ — Disrupting Folk Wisdom at Scale</p>
         <p>
           Некоммерческое приложение только для развлекательных целей. Все выражения являются
           элементами народного фольклора и используются исключительно в юмористическом контексте.

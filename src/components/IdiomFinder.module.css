@@ -9,8 +9,8 @@
   align-items: center;
   gap: 16px;
   padding: 20px 32px;
-  border-bottom: 6px ridge #ffff00;
-  background: linear-gradient(to right, #ff00ff, #00ffff, #ffff00);
+  border-bottom: 6px ridge #ff00ff;
+  background: linear-gradient(to right, #1a0033, #001a2a, #0a0014);
   flex-wrap: wrap;
 }
 
@@ -28,12 +28,57 @@
 .headerSub {
   font-size: 1rem;
   font-weight: bold;
-  color: #000080;
+  color: #00ffcc;
   margin-top: 6px;
-  background: #ffffff;
+  background: #050010;
   display: inline-block;
   padding: 2px 8px;
-  border: 2px solid #ff0000;
+  border: 2px solid #ff00ff;
+}
+
+/* === Parody enterprise SaaS ad banner === */
+.saasAd {
+  background: linear-gradient(135deg, #1a0033 0%, #001a2a 100%);
+  border: 3px solid #00ffcc;
+  border-radius: 0;
+  padding: 18px 20px;
+  margin-bottom: 28px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0,255,204,0.4);
+}
+
+.saasBrand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #00ffcc;
+  text-shadow: 0 0 10px #00ffcc, 2px 2px 0 #ff00ff;
+  letter-spacing: 0.04em;
+  margin-bottom: 8px;
+}
+
+.saasPitch {
+  font-size: 0.95rem;
+  font-weight: bold;
+  color: #ff66ff;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+.saasBadges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.saasBadges span {
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #0a0014;
+  background: linear-gradient(to bottom, #00ffcc, #00aa88);
+  border-radius: 999px;
+  padding: 3px 12px;
+  white-space: nowrap;
 }
 
 .main {
@@ -56,21 +101,22 @@
 
 .textarea {
   width: 100%;
-  background: #ffffee;
-  border: 4px inset #008080;
+  background: #050010;
+  border: 4px inset #00ffcc;
   border-radius: 0;
   padding: 16px;
-  color: #000080;
+  color: #00ffcc;
   font-size: 1.05rem;
   font-family: 'Comic Sans MS', cursive;
   line-height: 1.6;
   outline: none;
   min-height: 120px;
+  color-scheme: dark;
 }
 
 .textarea:focus {
   border-color: #ff00ff;
-  background: #ffffff;
+  background: #0d0018;
 }
 
 .textarea:disabled {
@@ -78,7 +124,7 @@
 }
 
 .textarea::placeholder {
-  color: #888;
+  color: #557;
 }
 
 /* === BIG VISIBLE MICROPHONE BUTTON === */
@@ -119,9 +165,10 @@
 .listeningHint {
   font-size: 1.1rem;
   font-weight: bold;
-  color: #ff0000;
+  color: #ff3333;
+  text-shadow: 0 0 8px #ff0000;
   text-align: center;
-  background: #ffff00;
+  background: #1a0000;
   padding: 6px;
   border: 2px dashed #ff0000;
 }
@@ -221,12 +268,12 @@
 }
 
 .bestCard {
-  background: #ffffcc;
+  background: #14001f;
   border: 6px ridge #ff00ff;
   border-radius: 0;
   padding: 28px;
   position: relative;
-  box-shadow: 8px 8px 0 #008080;
+  box-shadow: 0 0 24px #ff00ff, 8px 8px 0 #00ffcc;
 }
 
 .bestLabel {
@@ -234,22 +281,22 @@
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: #ff00ff;
-  text-shadow: 1px 1px 0 #000080;
+  color: #ff66ff;
+  text-shadow: 0 0 8px #ff00ff;
   margin-bottom: 16px;
 }
 
 .idiomText {
   font-size: 1.6rem;
-  color: #ff0000;
+  color: #ffff00;
   line-height: 1.4;
   margin-bottom: 14px;
   font-weight: bold;
-  text-shadow: 1px 1px 0 #ffff00;
+  text-shadow: 0 0 10px #ffaa00;
 }
 
 .explanation {
-  color: #000080;
+  color: #00ffcc;
   font-size: 1.05rem;
   font-weight: bold;
   line-height: 1.7;
@@ -257,14 +304,14 @@
 }
 
 .usageTip {
-  color: #800080;
+  color: #ff99ff;
   font-size: 1rem;
   font-style: italic;
   line-height: 1.6;
   margin-bottom: 20px;
-  background: #ffffff;
+  background: #050010;
   padding: 8px;
-  border: 2px dashed #800080;
+  border: 2px dashed #ff66ff;
 }
 
 .copyBtn {
@@ -293,10 +340,10 @@
   font-size: 1.3rem;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  color: #000080;
+  color: #00ffcc;
   margin-bottom: 14px;
   font-weight: bold;
-  text-shadow: 1px 1px 0 #00ffff;
+  text-shadow: 0 0 8px #00ffcc;
 }
 
 .altGrid {
@@ -306,7 +353,7 @@
 }
 
 .altCard {
-  background: #ffffff;
+  background: #0d0018;
   border: 4px ridge #00ffff;
   border-radius: 0;
   padding: 18px;
@@ -316,7 +363,7 @@
 
 .altIdiom {
   font-size: 1.1rem;
-  color: #ff0000;
+  color: #ffff00;
   font-weight: bold;
   line-height: 1.5;
   margin-bottom: 10px;
@@ -325,7 +372,7 @@
 
 .altExplanation {
   font-size: 0.95rem;
-  color: #000080;
+  color: #00ffcc;
   font-weight: bold;
   line-height: 1.6;
 }
@@ -352,13 +399,20 @@
 
 .footer {
   padding: 20px 24px;
-  border-top: 6px ridge #ffff00;
+  border-top: 6px ridge #ff00ff;
   text-align: center;
   font-size: 0.85rem;
-  color: #ffffff;
+  color: #99ffee;
   font-weight: bold;
   line-height: 1.6;
-  background: #000080;
+  background: #050010;
+}
+
+.footerBrand {
+  font-size: 1rem;
+  color: #00ffcc;
+  text-shadow: 0 0 8px #00ffcc;
+  margin-bottom: 10px;
 }
 
 @media (max-width: 600px) {

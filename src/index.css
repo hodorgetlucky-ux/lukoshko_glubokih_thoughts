@@ -5,7 +5,7 @@
 }
 
 :root {
-  --text: #000080;
+  --text: #00ffcc;
 }
 
 html, body {
@@ -13,11 +13,11 @@ html, body {
 }
 
 body {
-  /* Tacky early-2000s tiled gradient background */
-  background: #008080;
+  /* Tacky early-2000s vibe, but DARK: neon grid on near-black */
+  background: #0a0014;
   background-image:
-    repeating-linear-gradient(45deg, rgba(255,255,0,0.08) 0 20px, rgba(255,0,255,0.08) 20px 40px),
-    linear-gradient(135deg, #00c3ff 0%, #008080 40%, #800080 100%);
+    repeating-linear-gradient(45deg, rgba(255,0,255,0.06) 0 20px, rgba(0,255,255,0.06) 20px 40px),
+    radial-gradient(ellipse at top, #1a0033 0%, #0a0014 55%, #000000 100%);
   background-attachment: fixed;
   color: var(--text);
   font-family: 'Comic Sans MS', 'Comic Sans', 'Chalkboard SE', cursive;

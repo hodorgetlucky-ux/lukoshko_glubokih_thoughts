@@ -34,6 +34,9 @@ export default function AgeGate({ onVerified }: Props) {
   return (
     <div className={styles.wrapper}>
       <div className={styles.card}>
+        <div className={styles.brand}>
+          <span className={styles.brandLogo}>🎧</span> B2B SaaS Hard Bass™
+        </div>
         <div className={styles.icon}>🪣✨🎉</div>
         <h1 className={styles.title}>
           <span className="wordart">Лукошко</span><br />
