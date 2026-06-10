@@ -1,5 +1,7 @@
 import Anthropic from '@anthropic-ai/sdk'
 
+export const config = { runtime: 'edge' }
+
 const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY })
 
 const SYSTEM_PROMPT = `Ты — эксперт по русскому народному фольклору и разговорным выражениям. Твоя задача — подобрать наиболее точное и уместное народное выражение к описанной ситуации.
