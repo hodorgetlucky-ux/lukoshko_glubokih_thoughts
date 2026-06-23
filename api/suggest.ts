@@ -160,7 +160,7 @@ export default async function handler(req: Request): Promise<Response> {
 
   try {
     const response = await client.messages.create({
-      model: 'claude-opus-4-6',
+      model: 'claude-opus-4-8',
       max_tokens: 1024,
       system: SYSTEM_PROMPT,
       messages: [
